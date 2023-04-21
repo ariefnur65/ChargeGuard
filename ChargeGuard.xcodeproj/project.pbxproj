@@ -27,6 +27,8 @@
 		A456448829F014C10076199E /* ChargeGuard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChargeGuard; sourceTree = BUILT_PRODUCTS_DIR; };
 		A456448B29F014C10076199E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A4FF09E629F2C24D00F622A7 /* BatteryLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryLevelModel.swift; sourceTree = "<group>"; };
+		A4FF09E929F2D96400F622A7 /* Printing description of info_not_charging.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "Printing description of info_not_charging.yml"; sourceTree = "<group>"; };
+		A4FF09EA29F2D96400F622A7 /* Printing description of info_charging.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "Printing description of info_charging.yml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		A456448A29F014C10076199E /* ChargeGuard */ = {
 			isa = PBXGroup;
 			children = (
+				A4FF09E829F2D92700F622A7 /* Notes */,
 				A4FF09E529F2C22500F622A7 /* Model */,
 				A456448B29F014C10076199E /* main.swift */,
 			);
@@ -71,6 +74,15 @@
 				A4FF09E629F2C24D00F622A7 /* BatteryLevelModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A4FF09E829F2D92700F622A7 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				A4FF09EA29F2D96400F622A7 /* Printing description of info_charging.yml */,
+				A4FF09E929F2D96400F622A7 /* Printing description of info_not_charging.yml */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

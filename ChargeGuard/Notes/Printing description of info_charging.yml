@@ -1,0 +1,62 @@
+Printing description of info:
+▿ 20 elements
+  ▿ 0 : 2 elements
+    - key : "Is Present"
+    - value : 1
+  ▿ 1 : 2 elements
+    - key : "BatteryHealth"
+    - value : Good
+  ▿ 2 : 2 elements
+    - key : "Time to Full Charge"
+    - value : 0
+  ▿ 3 : 2 elements
+    - key : "LPM Active"
+    - value : 0
+  ▿ 4 : 2 elements
+    - key : "Transport Type"
+    - value : Internal
+  ▿ 5 : 2 elements
+    - key : "DesignCycleCount"
+    - value : 1000
+  ▿ 6 : 2 elements
+    - key : "Current Capacity"
+    - value : 100
+  ▿ 7 : 2 elements
+    - key : "Power Source State"
+    - value : AC Power
+  ▿ 8 : 2 elements
+    - key : "Is Charged"
+    - value : 1
+  ▿ 9 : 2 elements
+    - key : "Type"
+    - value : InternalBattery
+  ▿ 10 : 2 elements
+    - key : "Hardware Serial Number"
+    - value : D860424AAR0L3L2E1
+  ▿ 11 : 2 elements
+    - key : "Optimized Battery Charging Engaged"
+    - value : 0
+  ▿ 12 : 2 elements
+    - key : "Name"
+    - value : InternalBattery-0
+  ▿ 13 : 2 elements
+    - key : "Current"
+    - value : -16
+  ▿ 14 : 2 elements
+    - key : "Time to Empty"
+    - value : 0
+  ▿ 15 : 2 elements
+    - key : "Battery Provides Time Remaining"
+    - value : 1
+  ▿ 16 : 2 elements
+    - key : "Power Source ID"
+    - value : 7995491
+  ▿ 17 : 2 elements
+    - key : "Max Capacity"
+    - value : 100
+  ▿ 18 : 2 elements
+    - key : "Is Charging"
+    - value : 0
+  ▿ 19 : 2 elements
+    - key : "BatteryHealthCondition"
+    - value : 
