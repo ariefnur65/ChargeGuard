@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A456448C29F014C10076199E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456448B29F014C10076199E /* main.swift */; };
+		A4FF09E729F2C24D00F622A7 /* BatteryLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FF09E629F2C24D00F622A7 /* BatteryLevelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		A456448829F014C10076199E /* ChargeGuard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChargeGuard; sourceTree = BUILT_PRODUCTS_DIR; };
 		A456448B29F014C10076199E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A4FF09E629F2C24D00F622A7 /* BatteryLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryLevelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,18 @@
 		A456448A29F014C10076199E /* ChargeGuard */ = {
 			isa = PBXGroup;
 			children = (
+				A4FF09E529F2C22500F622A7 /* Model */,
 				A456448B29F014C10076199E /* main.swift */,
 			);
 			path = ChargeGuard;
+			sourceTree = "<group>";
+		};
+		A4FF09E529F2C22500F622A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4FF09E629F2C24D00F622A7 /* BatteryLevelModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FF09E729F2C24D00F622A7 /* BatteryLevelModel.swift in Sources */,
 				A456448C29F014C10076199E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
