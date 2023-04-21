@@ -9,23 +9,29 @@ import Foundation
 import IOKit.ps
 
 func getBatteryLevel() -> Float? {
-    let powerSources = IOPSCopyPowerSourcesInfo().takeRetainedValue()
-    let powerSourcesList = IOPSCopyPowerSourcesList(powerSources).takeRetainedValue()
+    // Get instance of a
+    let snapshot = IOPSCopyPowerSourcesInfo().takeRetainedValue()
+
+    // Pull out a list of power sources
+    let sources = IOPSCopyPowerSourcesList(snapshot).takeRetainedValue() as Array
+    var maxCapacity = 0.0
+    var maxCurrentCapacity = 0.0
     
-    var batteryLevel: Float?
-    
-    for i in 0 ..< CFArrayGetCount(powerSourcesList) {
-        let powerSource = CFArrayGetValueAtIndex(powerSourcesList, i)
-        let info = IOPSGetPowerSourceDescription(powerSources.takeRetainedValue(), powerSource as! CFTypeRef).takeUnretainedValue() as! [String: Any]
-        
-        if let currentCapacity = info[kIOPSCurrentCapacityKey] as? Int,
-           let maxCapacity = info[kIOPSMaxCapacityKey] as? Int {
-            batteryLevel = Float(currentCapacity) / Float(maxCapacity)
-            break
-        }
+    for ps in sources {
+        // Fetch the information for a given power source out of our snapshot
+            let info = IOPSGetPowerSourceDescription(snapshot, ps).takeUnretainedValue() as! [String: AnyObject]
+
+            // Pull out the name and capacity
+            if let name = info[kIOPSNameKey] as? String,
+                let capacity = info[kIOPSCurrentCapacityKey] as? Double,
+                let max = info[kIOPSMaxCapacityKey] as? Double {
+                print("maxCapacity \(max), currentCapacity \(capacity), name \(name)")
+                maxCurrentCapacity = capacity + maxCapacity
+                maxCapacity = maxCapacity + max
+            }
     }
-    
-    return batteryLevel
+    let batteryPercentage: Double = maxCurrentCapacity/maxCapacity
+    return Float(batteryPercentage)
 }
 
 var upperBoundPercentage : Float
@@ -43,9 +49,14 @@ lowerBoundPercentage = Float(readLine()!) ?? 0
 while(true)
 {
     let batteryLevel = getBatteryLevel()
-    
     if let batteryLevel = batteryLevel {
         print("Battery level: \(batteryLevel)")
+        if (batteryLevel > upperBoundPercentage){
+            print("RELEASE CHARGE!!!")
+        }
+        if (batteryLevel < lowerBoundPercentage){
+            print("Need to Charge!!!")
+        }
     } else {
         print("Unable to get battery level.")
     }
