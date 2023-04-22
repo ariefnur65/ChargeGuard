@@ -22,10 +22,8 @@ func getBatteryLevel() -> BatteryLevelModel {
         let info = IOPSGetPowerSourceDescription(snapshot, ps).takeUnretainedValue() as! [String: AnyObject]
 
         // Pull out the name and capacity
-        if let name = info[kIOPSNameKey] as? String,
-            let capacity = info[kIOPSCurrentCapacityKey] as? Double,
+        if let capacity = info[kIOPSCurrentCapacityKey] as? Double,
             let max = info[kIOPSMaxCapacityKey] as? Double {
-            print("maxCapacity \(max), currentCapacity \(capacity), name \(name)")
             maxCurrentCapacity = capacity + maxCapacity
             maxCapacity = maxCapacity + max
         }
